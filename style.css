@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    border: 0;
+}
+
+:root{
+    /*Primary*/
+
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+
+/*Neutral*/
+
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body{
+    background-color: var(--Dark-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+}
+
+.base{
+    background-color: var(--Dark-Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo{
+    color: var(--Neon-Green);
+
+}
+
+#citacao{
+    color: var(--Light-Cyan);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.icone{
+    position: relative;
+    background-color: var(--Neon-Green);
+    border-radius: 40px;
+    padding: 12px 14px;
+}
+
+.icone_imagem{
+    margin-top: 2px;
+    
+}
+
+@media screen and (max-width: 375px){
+    .base{
+        margin-top: 30%;
+        width: 90%;
+        height: 350px;
+        background-image: url(images/pattern-divider-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: 40px 270px;
+        background-size: 250px;
+        border-radius: 8px;
+    }
+
+    #titulo{
+        margin: 30px 0;
+        font-size: 15px;
+
+    }
+
+    #citacao{
+        width: 255px;
+        height: 170px;
+    }
+
+    .icone{
+        bottom: -65px;
+        left: -2px;
+    }
+
+}
+
+@media screen and (max-width: 1440px){
+    .base{
+        margin-top: 170px;
+        width: 350px;
+        height: 210px;
+        background-image: url(images/pattern-divider-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: 49px 150px;
+        background-size: 250px;
+        border-radius: 8px;
+    }
+
+    #titulo{
+        margin: 20px 0;
+        font-size: 12px;
+    }
+
+    #citacao{
+        width: 255px;
+        height: 90px;
+    }
+
+    .icone{
+        bottom: -40px;
+        left: -2px;
+    }
+
+    .icone:hover{
+        box-shadow: 1px 1px 15px var(--Neon-Green);
+    }
+
+}
